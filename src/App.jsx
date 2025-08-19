@@ -230,7 +230,9 @@ export default function PsychologistWebsite() {
                                 <Mail className="text-teal-600 mt-1 flex-shrink-0" size={20}/>
                                 <div>
                                     <h4 className="font-semibold text-gray-700">E-mail</h4>
-                                    <p>DOPLNIT</p>
+                                    <a href="mailto:psychologiebezecna@gmail.com" className="text-teal-600 hover:underline">
+                                      psychologiebezecna@gmail.com
+                                    </a>
                                 </div>
                             </div>
                              <div className="flex items-start gap-4">
