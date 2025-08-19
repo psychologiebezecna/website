@@ -254,7 +254,7 @@ export default function PsychologistWebsite() {
                         <div className="aspect-w-1 aspect-h-1 md:aspect-h-full md:h-full w-full bg-gray-200 rounded-lg overflow-hidden">
                             {/* MODIFICATION: Updated iframe src for correct map pin location */}
                             <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.899651586948!2d14.4029588769399!3d50.06940897152229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b9454b3c1588d%3A0x255b7509f654f1a6!2sOstrovsk%C3%Aho%20253%2F3%2C%20150%2000%20Praha%205-Sm%C3%ADchov!5e0!3m2!1scs!2scz!4v1724068694351!5m2!1scs!2scz" 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.9491089643243!2d14.40008707682758!3d50.06851471479017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b9457240a2afd%3A0x4f60e664a96d9491!2sOstrovsk%C3%A9ho%20253%2F3%2C%20150%2000%20Praha%205-And%C4%9Bl!5e0!3m2!1scs!2scz!4v1755618450355!5m2!1scs!2scz" 
                                 width="100%" 
                                 height="100%" 
                                 style={{ border:0 }} 
@@ -284,9 +284,6 @@ export default function PsychologistWebsite() {
             </p>
             <p className="mt-8 text-sm">
               &copy; {new Date().getFullYear()} Mgr. Andrea Bezecná. Všechna práva vyhrazena.
-            </p>
-             <p className="mt-2 text-xs text-gray-500">
-              Web vytvořen s pomocí AI.
             </p>
         </div>
       </footer>
