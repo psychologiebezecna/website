@@ -35,7 +35,7 @@ export default function PsychologistWebsite() {
       <header className="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
         <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
           <a href="#" className="text-2xl font-bold text-teal-800">
-            Mgr. Andrea Bezecná
+            Psychologie Bezecná
           </a>
           <div className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
