@@ -147,8 +147,9 @@ export default function PsychologistWebsite() {
                   </ul>
                   
                   {/* Collapsible full text */}
-                  <div className={`overflow-hidden transition-all duration-700 ease-in-out ${isAboutExpanded ? 'max-h-screen' : 'max-h-0'}`}>
-                    <div className="pt-4 space-y-4 text-sm text-gray-600">
+                  {/* MODIFICATION: Added text-justify and updated max-h for mobile visibility */}
+                  <div className={`overflow-hidden transition-all duration-700 ease-in-out ${isAboutExpanded ? 'max-h-[5000px]' : 'max-h-0'}`}>
+                    <div className="pt-4 space-y-4 text-sm text-gray-600 text-justify">
                        <p>Vysokoškolské studium jednooborové psychologie jsem absolvovala na Pedagogické fakultě Univerzity Karlovy v Praze v roce 2018. Ještě během studia jsem 3 roky pracovala v neziskové organizaci Proxima Sociale, kde jsem v terapeutické dvojici lektorovala podpůrné skupiny pro dospívající (12 - 18 let), kteří měli zkušenost s příbuzenskou pěstounskou péčí anebo s OSPOD.</p>
                        <p>Po ukončení studia jsem 6 let působila jako psycholog v ambulantní části Speciálně pedagogického centra Jedličkova ústavu, kde jsem pracovala s dětmi a dospívajícími s tělesným postižením či jiným dlouhodobým onemocněním. Mojí náplní práce byla tehdy především diagnostika kognitivních funkcí, nastavování podpůrných opatření ve vzdělávání ve spolupráci se školami, a v neposlední řadě také práce s rodinou.</p>
                        <p>Od ledna roku 2024 pracuji jako psycholog ve zdravotnictví na Klinice rehabilitačního lékařství Všeobecné fakultní nemocnice v Praze, kde se věnuji především dospělým lidem se získaným poškozením mozku (CMP, úrazy, pooperační stavy..). Kromě neuropsychologické diagnostiky se zde věnuji také nápravě a rehabilitaci kognitivních funkcí, a poskytuji psychologickou podporu jak klientům, tak i jejich blízkým.</p>
