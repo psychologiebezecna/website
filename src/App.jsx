@@ -274,7 +274,6 @@ export default function PsychologistWebsite() {
                     </div>
                 </div>
             </div>
-          </div>
         </section>
       </main>
 
