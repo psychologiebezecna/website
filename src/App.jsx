@@ -224,7 +224,7 @@ export default function PsychologistWebsite() {
                                   <div>
                                   <h4 className="font-semibold text-gray-700">Telefon</h4>
                                     <div className="flex flex-col">
-                                    <a href="sms:+420721545007" className="text-gray-600 hover:text-teal-600 transition-colors duration-300">+420 000 000 000</a>
+                                    <a href="sms:+420000000000" className="text-gray-600 hover:text-teal-600 transition-colors duration-300">+420 000 000 000</a>
                                     </div>
                                   </div>
                             </div>
