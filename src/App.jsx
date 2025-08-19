@@ -222,21 +222,21 @@ export default function PsychologistWebsite() {
                                 <Phone className="text-teal-600 mt-1 flex-shrink-0" size={20}/>
                                 <div>
                                     <h4 className="font-semibold text-gray-700">Telefon</h4>
-                                    <p>Bude doplněno</p>
+                                    <p>DOPLNIT</p>
                                 </div>
                             </div>
                              <div className="flex items-start gap-4">
                                 <Mail className="text-teal-600 mt-1 flex-shrink-0" size={20}/>
                                 <div>
                                     <h4 className="font-semibold text-gray-700">E-mail</h4>
-                                    <p>Bude doplněno</p>
+                                    <p>DOPLNIT</p>
                                 </div>
                             </div>
                              <div className="flex items-start gap-4">
                                 <DollarSign className="text-teal-600 mt-1 flex-shrink-0" size={20}/>
                                 <div>
                                     <h4 className="font-semibold text-gray-700">Číslo účtu</h4>
-                                    <p>Bude doplněno</p>
+                                    <p>DOPLNIT</p>
                                 </div>
                             </div>
                         </div>
