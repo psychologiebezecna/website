@@ -1,5 +1,6 @@
 import React from 'react';
 import { User, Sun, DollarSign, Phone, Mail, MapPin, Shield, ChevronDown, ChevronUp } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 // Helper component for section titles
 const SectionTitle = ({ children }) => (
@@ -37,7 +38,7 @@ export default function PsychologistWebsite() {
           {/* MODIFICATION: Added logo placeholder */}
           <a href="#" className="flex items-center gap-3 text-2xl font-bold text-teal-800">
             <img 
-              src="src/assets/logo.png" 
+              src={logo} 
               alt="Psychologie Bezecná Logo"
               className="h-8 w-8 rounded-md" // h-8 roughly matches the height of 2xl text
             />
