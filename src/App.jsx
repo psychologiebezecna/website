@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { User, Sun, DollarSign, Phone, Mail, MapPin, Shield, ChevronDown, ChevronUp } from 'lucide-react';
 
 // Helper component for section titles
@@ -10,7 +10,7 @@ const SectionTitle = ({ children }) => (
 
 // Helper component for service cards
 const ServiceCard = ({ title, children }) => (
-  <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+  <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 h-full">
     <h3 className="text-2xl font-semibold text-teal-700 mb-4">{title}</h3>
     <div className="text-gray-600 space-y-4">
       {children}
@@ -20,7 +20,7 @@ const ServiceCard = ({ title, children }) => (
 
 // Main App Component
 export default function PsychologistWebsite() {
-  const [isAboutExpanded, setIsAboutExpanded] = useState(false);
+  // State for collapsible text is no longer needed as per user request.
 
   const navLinks = [
     { href: '#sluzby', label: 'Služby' },
@@ -34,8 +34,14 @@ export default function PsychologistWebsite() {
       {/* --- Header & Navigation --- */}
       <header className="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
         <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <a href="#" className="text-2xl font-bold text-teal-800">
-            Psychologie Bezecná
+          {/* MODIFICATION: Added logo placeholder */}
+          <a href="#" className="flex items-center gap-3 text-2xl font-bold text-teal-800">
+            <img 
+              src="assets/logo.png" 
+              alt="Psychologie Bezecná Logo"
+              className="h-8 w-8 rounded-md" // h-8 roughly matches the height of 2xl text
+            />
+            <span>Psychologie Bezecná</span>
           </a>
           <div className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
@@ -54,18 +60,14 @@ export default function PsychologistWebsite() {
         {/* --- Hero Section --- */}
         <section 
           className="relative text-center py-24 md:py-40 bg-cover bg-center text-white"
-          // To change the background image, replace the URL below with your own.
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071&auto=format&fit=crop')" }}
         >
-            {/* This div creates a dark overlay for better text readability */}
             <div className="absolute inset-0 bg-black/50"></div>
             <div className="container mx-auto px-6 relative">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight drop-shadow-md">
                     Najděte klid a jistotu na své cestě
                 </h1>
-                <p className="mt-6 text-lg md:text-xl max-w-3xl mx-auto drop-shadow-sm">
-                    Bezpečný prostor pro vaše myšlenky, emoce a osobní růst.
-                </p>
+                {/* Subtitle removed as per user request */}
                 <a href="#kontakt" className="mt-10 inline-block bg-teal-600 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-teal-700 transition-transform transform hover:scale-105 duration-300">
                     Domluvit si konzultaci
                 </a>
@@ -79,10 +81,11 @@ export default function PsychologistWebsite() {
             <SectionTitle>Služby</SectionTitle>
             <div className="grid md:grid-cols-2 gap-12">
               
-              {/* What I Offer */}
+              {/* What I Offer - Text restored to original version */}
               <ServiceCard title="Co nabízím?">
-                <p>
-                  Psychologické poradenství je krátkodobá, odborná podpora, která vám může pomoci lépe zvládat náročné období, ve kterém se cítíte ztracení, vyčerpaní nebo pod tlakem.
+                {/* MODIFICATION: Added text-justify */}
+                <p className="text-justify">
+                  Psychologické poradenství je krátkodobá, odborná podpora, která vám může pomoci lépe zvládat náročné období, ve kterém se cítíte ztracení, vyčerpaní nebo pod tlakem. Ne vždy musí jít o „velký problém“ – často stačí, že se něco v životě zamotá, nevíte, jak dál, nebo potřebujete bezpečný prostor, kde si srovnat myšlenky a emoce.
                 </p>
                 <p>Můžete se na mě obrátit například když:</p>
                 <ul className="list-disc list-inside space-y-2 text-gray-600 pl-4">
@@ -93,25 +96,27 @@ export default function PsychologistWebsite() {
                   <li>máte potíže s komunikací, sebehodnotou nebo hranicemi</li>
                   <li>potřebujete nadhled, podporu a praktické nástroje, jak se pohnout dál</li>
                 </ul>
-                <p>
-                  Poradenství je zaměřené na přítomnost a blízkou budoucnost. Společně se podíváme na to, co právě prožíváte, co vás tíží nebo brzdí.
+                {/* MODIFICATION: Added text-justify */}
+                <p className="text-justify">
+                  Poradenství je zaměřené na přítomnost a blízkou budoučnost – nepracujeme do hloubky s minulostí, ale spíš se soustředíme na to, co teď potřebujete zvládnout, změnit nebo pochopit. Společně se podíváme na to, co právě prožíváte, co vás tíží nebo brzdí. Pomohu vám lépe se v situaci zorientovat, zvládnout související stres, posílit vaši schopnost rozhodovat se, komunikovat nebo najít konkrétní kroky ke změně.
                 </p>
               </ServiceCard>
 
-              {/* What I Don't Offer */}
+              {/* What I Don't Offer - Text updated to new version */}
               <ServiceCard title="Co nenabízím?">
-                <h4 className="font-semibold text-gray-700">Dlouhodobou psychoterapii</h4>
-                <p>
-                  Protože jsem teprve na samém počátku psychoterapeutického výcviku, v případě potřeby hlubší práce vám doporučím kolegu s absolvovaným výcvikem a pomohu vám najít někoho vhodného.
+                <h4 className="font-semibold text-gray-700">Dlouhodobou psychoterapii pro dospělé</h4>
+                {/* MODIFICATION: Added text-justify */}
+                <p className="text-justify">
+                  Pokud během společné práce narazíme na nějaká těžší témata či obtíže, jež budou vyžadovat hlubší a déledobější psychoterapeutické vedení, doporučím Vám obrátit se na nějakého kolegu s již absolvovaným psychoterapeutickým výcvikem. Ráda Vám ale v takovém případě pomohu najít někoho pro Vás vhodného.
                 </p>
                 <h4 className="font-semibold text-gray-700 mt-6">Dětskou diagnostiku a psychoterapii</h4>
-                <p>
-                  Nenabízím diagnostiku ani psychoterapii pro děti a dospívající.
+                {/* MODIFICATION: Added text-justify */}
+                <p className="text-justify">
+                  Protože nemám k dispozici diagnostické nástroje pro děti a dospívající, nenabízím aktuálně v této věkové skupině diagnostiku ani psychoterapii.
                 </p>
                 <div className="mt-4 p-4 bg-amber-50 border-l-4 border-amber-400 rounded-r-lg">
-                  <p className="font-semibold text-amber-800">Poznámka pro rodiče</p>
-                  <p className="text-amber-700 text-sm mt-1">
-                    Pokud jako rodič potřebujete poradit ohledně Vašeho dítěte a čekáte na termín u jiného odborníka, mohu poskytnout krátkodobé podpůrné vedení a pomoci s hledáním vhodného specialisty.
+                  <p className="text-amber-700 text-sm text-justify">
+                    Pokud jste ale jako rodič v situaci, kdy potřebujete poradit ohledně Vašeho dítěte, a nemáte se na koho v blízké době obrátit (např. čekáte delší dobu na vyšetření v nemocnici nebo v psychologické poradně), mohu poskytnout alespoň krátkodobější psychologické podpůrné vedení, případně mohu pomoci s hledáním vhodného odborníka pro Vaše dítě.
                   </p>
                 </div>
               </ServiceCard>
@@ -123,7 +128,6 @@ export default function PsychologistWebsite() {
         <section id="o-mne" className="py-20 md:py-28 bg-teal-50">
           <div className="container mx-auto px-6">
             <SectionTitle>O mně</SectionTitle>
-            {/* MODIFICATION: Changed items-center to md:items-start to prevent image from shifting down on desktop */}
             <div className="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-lg flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
               <div className="flex-shrink-0">
                 <img 
@@ -135,36 +139,12 @@ export default function PsychologistWebsite() {
               <div className="text-center md:text-left">
                 <h3 className="text-2xl font-bold text-gray-800">Mgr. Andrea Bezecná</h3>
                 <p className="text-teal-600 font-medium mt-1">Psycholožka</p>
-                <div className="mt-6 text-gray-600 space-y-4">
-                  <p className="font-semibold">Klíčové zkušenosti:</p>
-                  <ul className="list-disc list-inside space-y-2 pl-4 text-sm">
-                      <li>Studium psychologie na PedF UK v Praze (ukončeno 2018).</li>
-                      <li>6 let praxe v SPC Jedličkova ústavu s dětmi a dospívajícími.</li>
-                      <li>Aktuálně psycholog ve zdravotnictví na Klinice rehabilitačního lékařství VFN v Praze.</li>
-                      <li>Zaměření na dospělé po poškození mozku, neuropsychologickou diagnostiku a kognitivní rehabilitaci.</li>
-                      <li>Důraz na psychohygienu, sebepéči a work-life balance.</li>
-                      <li>Od 2026 ve výcviku Kognitivně behaviorální terapie (KBT).</li>
-                  </ul>
-                  
-                  {/* Collapsible full text */}
-                  {/* MODIFICATION: Added text-justify and updated max-h for mobile visibility */}
-                  <div className={`overflow-hidden transition-all duration-700 ease-in-out ${isAboutExpanded ? 'max-h-[5000px]' : 'max-h-0'}`}>
-                    <div className="pt-4 space-y-4 text-sm text-gray-600 text-justify">
-                       <p>Vysokoškolské studium jednooborové psychologie jsem absolvovala na Pedagogické fakultě Univerzity Karlovy v Praze v roce 2018. Ještě během studia jsem 3 roky pracovala v neziskové organizaci Proxima Sociale, kde jsem v terapeutické dvojici lektorovala podpůrné skupiny pro dospívající (12 - 18 let), kteří měli zkušenost s příbuzenskou pěstounskou péčí anebo s OSPOD.</p>
-                       <p>Po ukončení studia jsem 6 let působila jako psycholog v ambulantní části Speciálně pedagogického centra Jedličkova ústavu, kde jsem pracovala s dětmi a dospívajícími s tělesným postižením či jiným dlouhodobým onemocněním. Mojí náplní práce byla tehdy především diagnostika kognitivních funkcí, nastavování podpůrných opatření ve vzdělávání ve spolupráci se školami, a v neposlední řadě také práce s rodinou.</p>
-                       <p>Od ledna roku 2024 pracuji jako psycholog ve zdravotnictví na Klinice rehabilitačního lékařství Všeobecné fakultní nemocnice v Praze, kde se věnuji především dospělým lidem se získaným poškozením mozku (CMP, úrazy, pooperační stavy..). Kromě neuropsychologické diagnostiky se zde věnuji také nápravě a rehabilitaci kognitivních funkcí, a poskytuji psychologickou podporu jak klientům, tak i jejich blízkým.</p>
-                       <p>Ve své práci vnímám jako velmi důležitou sféru osobní psychohygieny a sebepéče, velkým tématem je v dnešní době stále častěji umění vyvážení pracovní zátěže a odpočinku, což vnímám jako velmi důležité pilíře pro spokojený život nejen u klientů, kteří jsou v procesu rehabilitace a potýkají se nečekaně s nějakými zdravotními komplikacemi. Až sekundárně se v případě potřeby zabývám konkrétními obtížemi, jako jsou úzkostná nebo depresivní symptomatika, poruchy spánku, poruchy kognitivních funkcí, snížené sebehodnocení, obtíže v mezilidské komunikaci, vztahové či rodinné problémy, syndrom vyhoření a další.</p>
-                       <p>V průběhu roku 2026 nastupuji do akreditovaného psychoterapeutického výcviku v Kognitivně behaviorální terapii.</p>
-                    </div>
-                  </div>
-
-                  <button 
-                    onClick={() => setIsAboutExpanded(!isAboutExpanded)}
-                    className="flex items-center gap-2 text-teal-600 hover:text-teal-800 font-semibold mt-4 transition-colors duration-300"
-                  >
-                    {isAboutExpanded ? 'Skrýt podrobnosti' : 'Zobrazit více o mně'}
-                    {isAboutExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                  </button>
+                {/* Summary removed and full text is now always visible */}
+                <div className="mt-6 text-gray-600 space-y-4 text-justify">
+                   <p>Vysokoškolské studium jednooborové psychologie jsem absolvovala na Pedagogické fakultě Univerzity Karlovy v Praze v roce 2018. Ještě během studia jsem 3 roky pracovala v neziskové organizaci Proxima Sociale, kde jsem v terapeutické dvojici lektorovala podpůrné skupiny pro dospívající (12–18 let), kteří měli zkušenost s příbuzenskou pěstounskou péčí anebo s <span className="relative group font-medium">OSPOD<sup className="text-teal-600 font-bold cursor-help text-xs ml-0.5">?</sup><span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max px-2 py-1 bg-gray-700 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">Orgán sociálně-právní ochrany dětí</span></span>.</p>
+                   <p>Po ukončení studia jsem 6 let působila jako psycholog v ambulantní části Speciálně pedagogického centra Jedličkova ústavu, kde jsem pracovala s dětmi a dospívajícími s tělesným postižením či jiným dlouhodobým onemocněním. Mojí náplní práce byla tehdy především diagnostika kognitivních funkcí, nastavování podpůrných opatření ve vzdělávání ve spolupráci se školami, a v neposlední řadě také práce s rodinou. Od ledna roku 2024 pracuji jako psycholog ve zdravotnictví na Klinice rehabilitačního lékařství Všeobecné fakultní nemocnice v Praze, kde se věnuji především dospělým lidem se získaným poškozením mozku (CMP, úrazy, pooperační stavy..). Kromě neuropsychologické diagnostiky se zde věnuji také nápravě a rehabilitaci kognitivních funkcí, a poskytuji psychologickou podporu jak našim klientům, tak i jejich blízkým.</p>
+                   <p>Ve své práci vnímám jako velmi důležitou sféru osobní psychohygieny a sebepéče, velkým tématem je v dnešní době stále častěji umění vyvážení pracovní zátěže a odpočinku, což vnímám jako velmi důležité pilíře pro spokojený život nejen u klientů, kteří jsou v procesu rehabilitace a potýkají se nečekaně s nějakými zdravotními komplikacemi. Až sekundárně se v případě potřeby zabývám konkrétními obtížemi, jako jsou úzkostná nebo depresivní symptomatika, poruchy spánku, poruchy kognitivních funkcí, snížené sebehodnocení, obtíže v mezilidské komunikaci, vztahové či rodinné problémy, syndrom vyhoření a další..</p>
+                   <p>V průběhu roku 2026 nastupuji do akreditovaného psychoterapeutického výcviku v Kognitivně behaviorální terapii.</p>
                 </div>
               </div>
             </div>
@@ -176,9 +156,10 @@ export default function PsychologistWebsite() {
           <div className="container mx-auto px-6">
             <SectionTitle>Ceník</SectionTitle>
             <div className="max-w-3xl mx-auto space-y-8">
+              {/* MODIFICATION: Pricing layout reverted to two-box grid */}
               <div className="grid sm:grid-cols-2 gap-8 text-center">
                 <div className="bg-gray-50 p-8 rounded-xl border border-gray-200">
-                  <h3 className="text-xl font-semibold text-gray-800">První&nbsp;/&nbsp;jednorázová&nbsp;konzultace</h3>
+                  <h3 className="text-xl font-semibold text-gray-800">První / jednorázová konzultace</h3>
                   <p className="text-4xl font-bold text-teal-600 mt-4">800,- Kč</p>
                   <p className="text-gray-500 mt-2">/ 60 minut</p>
                 </div>
@@ -189,10 +170,10 @@ export default function PsychologistWebsite() {
                 </div>
               </div>
               <div className="text-center text-gray-600 space-y-4 pt-8 border-t">
-                <p><strong>Platba:</strong> V hotovosti, QR kódem na místě, nebo převodem na účet.</p>
-                <p>Služby jsou poskytovány za přímou úhradu, nemám smlouvy se zdravotními pojišťovnami.</p>
-                <p>Ve složité socioekonomické situaci je možná individuální dohoda na nižší sazbě.</p>
-                <p className="font-semibold text-red-700">Storno podmínky: Zrušení sezení méně než 24 hodin předem je účtováno plnou cenou.</p>
+                <p>Platba možná v hotovosti/prostřednictvím QR kódu během setkání, anebo převodem na účet.</p>
+                <p>Služby jsou poskytovány za přímou úhradu. Nemám smlouvy se zdravotními pojišťovnami.</p>
+                <p>Pokud se nacházíte ve složité socioekonomické situaci, je možné se individuálně dohodnout na nižší sazbě.</p>
+                <p className="font-semibold text-red-700">Pokud se klient na sezení nedostaví bez předchozí omluvy nebo jej zruší méně než 24 hodin předem, je účtována plná cena sezení.</p>
               </div>
             </div>
           </div>
@@ -209,6 +190,7 @@ export default function PsychologistWebsite() {
                         <div>
                             <h3 className="text-2xl font-bold text-gray-800">Mgr. Andrea Bezecná</h3>
                             <p className="text-gray-500">IČO: 23530472</p>
+                            <p className="text-gray-500">Sídlo: Praha 4, 147 00</p>
                         </div>
                         
                         <div className="space-y-4">
@@ -216,7 +198,8 @@ export default function PsychologistWebsite() {
                                 <MapPin className="text-teal-600 mt-1 flex-shrink-0" size={20}/>
                                 <div>
                                     <h4 className="font-semibold text-gray-700">Adresa konzultací</h4>
-                                    <p>Ostrovského 253/3 (Ženské domovy), 3. patro, dv. č. 3037<br/>150 00 Praha 5</p>
+                                    {/* MODIFICATION: Added underlined text */}
+                                    <p className="text-gray-600">Nabízené služby poskytuji <u>po předchozí domluvě</u> na adrese:<br/>Ostrovského 253/3 (Ženské domovy), 3.patro, dv. č.: 3037<br/>150 00 Praha 5.</p>
                                 </div>
                             </div>
                              <div className="flex items-start gap-4">
@@ -241,15 +224,14 @@ export default function PsychologistWebsite() {
                                 <DollarSign className="text-teal-600 mt-1 flex-shrink-0" size={20}/>
                                 <div>
                                     <h4 className="font-semibold text-gray-700">Číslo účtu</h4>
-                                    <p>DOPLNIT</p>
+                                    <p>?</p>
                                 </div>
                             </div>
                         </div>
 
                         <div className="mt-6 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
-                          <p className="font-semibold text-blue-800">První kontakt</p>
-                          <p className="text-blue-700 text-sm mt-1">
-                            Před navázáním spolupráce se prosím ozvěte prostřednictvím <strong>SMS</strong> nebo <strong>e-mailem</strong>. Stručně popište Vaši situaci a zanechte na sebe kontakt, ozvu se Vám zpět ohledně termínu.
+                          <p className="text-blue-800 text-sm">
+                            Před navázáním spolupráce se prosím nejdříve ozvěte prostřednictvím SMS anebo e-mailem (popište stručně situaci, se kterou se potýkáte, zanechte mi na sebe kontakt a já se Vám ozvu zpět ohledně termínu).
                           </p>
                         </div>
                     </div>
@@ -257,9 +239,8 @@ export default function PsychologistWebsite() {
                     {/* Right Column: Map */}
                     <div>
                         <div className="aspect-w-1 aspect-h-1 md:aspect-h-full md:h-full w-full bg-gray-200 rounded-lg overflow-hidden">
-                            {/* MODIFICATION: Updated iframe src for correct map pin location */}
                             <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.9491089643243!2d14.40008707682758!3d50.06851471479017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b9457240a2afd%3A0x4f60e664a96d9491!2sOstrovsk%C3%A9ho%20253%2F3%2C%20150%2000%20Praha%205-And%C4%9Bl!5e0!3m2!1scs!2scz!4v1755618450355!5m2!1scs!2scz" 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.9491089643243!2d14.40008707682758!3d50.06851471479017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b9457240a2afd%3A0x4f60e664a96d9491!2sOstrovsk%C3%Aho%20253%2F3%2C%2C%20150%2000%20Praha%205-And%C4%9Bl!5e0!3m2!1scs!2scz!4v1755618450355!5m2!1scs!2scz" 
                                 width="100%" 
                                 height="100%" 
                                 style={{ border:0 }} 
@@ -278,15 +259,21 @@ export default function PsychologistWebsite() {
       </main>
 
       {/* --- Footer --- */}
-      <footer className="bg-gray-800 text-gray-400 py-12">
+      {/* MODIFICATION: Increased bottom padding for mobile visibility */}
+      <footer className="bg-gray-800 text-gray-400 pt-12 pb-16">
         <div className="container mx-auto px-6 text-center">
             <div className="flex justify-center items-center gap-2 mb-4">
                 <Shield size={16} />
                 <h4 className="font-semibold">Ochrana osobních údajů</h4>
             </div>
-            <p className="max-w-3xl mx-auto text-xs">
-              Veškeré záznamy z našich setkání uchovávám výhradně za účelem poskytování psychologických služeb a pro potřeby vzájemné spolupráce. Osobní údaje klientů zpracovávám v souladu s Nařízením Evropského parlamentu a Rady (EU) 2016/679 (GDPR) a zákonem č. 110/2019 Sb., o zpracování osobních údajů. Osobní údaje nejsou předávány třetím stranám bez výslovného souhlasu klienta, s výjimkou případů daných legislativou.
-            </p>
+            <div className="max-w-3xl mx-auto text-xs space-y-3">
+              <p>
+                Veškeré záznamy z našich setkání uchovávám výhradně za účelem poskytování psychologických služeb a pro potřeby vzájemné spolupráce. Osobní údaje klientů zpracovávám v souladu s Nařízením Evropského parlamentu a Rady (EU) 2016/679 (GDPR) a zákonem č. 110/2019 Sb., o zpracování osobních údajů.
+              </p>
+              <p>
+                Osobní údaje nejsou předávány třetím stranám bez výslovného souhlasu klienta, <u>s výjimkou případů, kdy je poskytnutí údajů vyžadováno platnou legislativou</u> - například při ohlašovací povinnosti v souvislosti s trestnou činností, při bezprostředním ohrožení života nebo zdraví klienta či jiných osob, nebo pokud o údaje požádají oprávněné orgány veřejné moci (např. soud, policie).
+              </p>
+            </div>
             <p className="mt-8 text-sm">
               &copy; {new Date().getFullYear()} Mgr. Andrea Bezecná. Všechna práva vyhrazena.
             </p>
