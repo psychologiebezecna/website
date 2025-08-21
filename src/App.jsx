@@ -1,6 +1,6 @@
 import React from 'react';
 import { User, Sun, DollarSign, Phone, Mail, MapPin, Shield, ChevronDown, ChevronUp } from 'lucide-react';
-import logo from 'assets/logo.png';
+import logo from "./assets/logo.png";
 
 // Helper component for section titles
 const SectionTitle = ({ children }) => (
