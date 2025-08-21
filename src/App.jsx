@@ -37,7 +37,7 @@ export default function PsychologistWebsite() {
           {/* MODIFICATION: Added logo placeholder */}
           <a href="#" className="flex items-center gap-3 text-2xl font-bold text-teal-800">
             <img 
-              src="assets/logo.png" 
+              src="src/assets/logo.png" 
               alt="Psychologie Bezecná Logo"
               className="h-8 w-8 rounded-md" // h-8 roughly matches the height of 2xl text
             />
