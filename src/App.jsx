@@ -206,11 +206,11 @@ export default function PsychologistWebsite() {
                 <ContactItem icon={Landmark} title="Číslo účtu">
                   <p onCopy={(event) => {
                     event.preventDefault();
-                    const unformattedNumber = "3453240019/3030";
+                    const unformattedNumber = "3453240019";
                     event.clipboardData.setData("text/plain", unformattedNumber);
                     }}
-                  >345 324 0019/3030
-                  </p>
+                  >345 324 0019
+                  </p>/3030
                 </ContactItem>
               </div>
                         <div className="mt-6 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
