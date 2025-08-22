@@ -3,7 +3,6 @@ import { Landmark, Phone, Mail, MapPin, ShieldUser } from 'lucide-react';
 import logo from "./assets/logo.png";
 import heroBackground from "./assets/background.webp";
 import profile from "./assets/andrea.webp"
-import { Transition } from '@headlessui/react';
 
 const SectionTitle = ({ children }) => (
   <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
