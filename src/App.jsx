@@ -1,5 +1,5 @@
 import React from 'react';
-import { Landmark, Phone, Mail, MapPin, ShieldUser, Copyright } from 'lucide-react';
+import { Landmark, Phone, Mail, MapPin, ShieldUser } from 'lucide-react';
 import logo from "./assets/logo.png";
 import heroBackground from "./assets/background.webp";
 import { Transition } from '@headlessui/react';
@@ -252,7 +252,7 @@ export default function PsychologistWebsite() {
               </p>
             </div>
             <p className="mt-8 text-sm">
-              <Copyright /> {new Date().getFullYear()} Mgr. Andrea Bezecná. Všechna práva vyhrazena.
+              &copy; {new Date().getFullYear()} Mgr. Andrea Bezecná. Všechna práva vyhrazena.
             </p>
         </div>
       </footer>
