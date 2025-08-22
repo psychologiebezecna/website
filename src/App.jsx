@@ -1,6 +1,7 @@
 import React from 'react';
 import { Landmark, Phone, Mail, MapPin, ShieldUser } from 'lucide-react';
 import logo from "./assets/logo.png";
+import heroBackground from "./assets/background.webp";
 
 const SectionTitle = ({ children }) => (
   <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
@@ -66,7 +67,7 @@ export default function PsychologistWebsite() {
         {/* --- Hero Section --- */}
         <section 
           className="relative text-center py-24 md:py-40 bg-cover bg-center text-white"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071&auto=format&fit=crop')" }}
+          style={{ backgroundImage: `url(${heroBackground})` }}
         >
             <div className="absolute inset-0 bg-black/50"></div>
             <div className="container mx-auto px-6 relative">
