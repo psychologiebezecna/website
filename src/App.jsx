@@ -17,6 +17,18 @@ const ServiceCard = ({ title, children }) => (
   </div>
 );
 
+const ContactItem = ({ icon: Icon, title, children }) => (
+  <div className="flex items-start gap-4">
+    <Icon className="text-teal-600 mt-1 flex-shrink-0" size={20} />
+    <div>
+      <h4 className="font-semibold text-gray-700">{title}</h4>
+      <div className="text-gray-600 space-y-1">
+        {children}
+      </div>
+    </div>
+  </div>
+);
+
 // Main App Component
 export default function PsychologistWebsite() {
 
@@ -179,40 +191,19 @@ export default function PsychologistWebsite() {
                         </div>
                         
                         <div className="space-y-4">
-                            <div className="flex items-start gap-4">
-                                <MapPin className="text-teal-600 mt-1 flex-shrink-0" size={20}/>
-                                <div>
-                                    <h4 className="font-semibold text-gray-700">Adresa</h4>
-                                    <p className="text-gray-600">Nabízené služby poskytuji <u>po předchozí domluvě</u> na adrese:<br/>Ostrovského 253/3 (Ženské domovy), 3.patro, dv. č.: 3037<br/>150 00 Praha 5.</p>
-                                </div>
-                            </div>
-                             <div className="flex items-start gap-4">
-                                <Phone className="text-teal-600 mt-1 flex-shrink-0" size={20}/>
-                                  <div>
-                                  <h4 className="font-semibold text-gray-700">Telefon</h4>
-                                    <div className="flex flex-col">
-                                    <a href="sms:+420000000000" className="text-gray-600 hover:text-teal-600 transition-colors duration-300">+420 000 000 000</a>
-                                    </div>
-                                  </div>
-                            </div>
-                             <div className="flex items-start gap-4">
-                                <Mail className="text-teal-600 mt-1 flex-shrink-0" size={20}/>
-                                <div>
-                                    <h4 className="font-semibold text-gray-700">E-mail</h4>
-                                    <a href="mailto:psychologiebezecna@gmail.com" className="text-teal-600 hover:underline">
-                                      psychologiebezecna@gmail.com
-                                    </a>
-                                </div>
-                            </div>
-                             <div className="flex items-start gap-4">
-                                <Landmark className="text-teal-600 mt-1 flex-shrink-0" size={20}/>
-                                <div>
-                                    <h4 className="font-semibold text-gray-700">Číslo účtu</h4>
-                                    <p>?</p>
-                                </div>
-                            </div>
-                        </div>
-
+                <ContactItem icon={MapPin} title="Adresa">
+                  <p>Nabízené služby poskytuji <u>po předchozí domluvě</u> na adrese:<br/>Ostrovského 253/3 (Ženské domovy), 3.patro, dv. č.: 3037<br/>150 00 Praha 5</p>
+                </ContactItem>
+                <ContactItem icon={Phone} title="Telefon">
+                  <a href="sms:+420000000000" className="text-gray-600 hover:text-teal-600 transition-colors duration-300">+420 000 000 000</a>
+                </ContactItem>
+                <ContactItem icon={Mail} title="E-mail">
+                  <a href="mailto:psychologiebezecna@gmail.com" className="text-teal-600 hover:underline">psychologiebezecna@gmail.com</a>
+                </ContactItem>
+                <ContactItem icon={Landmark} title="Číslo účtu">
+                  <p>?</p>
+                </ContactItem>
+              </div>
                         <div className="mt-6 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
                           <p className="text-blue-800 text-sm">
                             Před navázáním spolupráce se prosím nejdříve ozvěte prostřednictvím <b>SMS</b> anebo <b>e-mailem</b> (popište stručně situaci, se kterou se potýkáte, zanechte mi na sebe kontakt a já se Vám ozvu zpět ohledně termínu).
