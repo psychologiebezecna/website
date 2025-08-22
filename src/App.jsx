@@ -2,6 +2,7 @@ import React from 'react';
 import { Landmark, Phone, Mail, MapPin, ShieldUser } from 'lucide-react';
 import logo from "./assets/logo.png";
 import heroBackground from "./assets/background.webp";
+import { Transition } from '@headlessui/react';
 
 const SectionTitle = ({ children }) => (
   <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
@@ -143,7 +144,8 @@ export default function PsychologistWebsite() {
                    <p>Vysokoškolské studium jednooborové psychologie jsem absolvovala na Pedagogické fakultě Univerzity Karlovy v Praze v roce 2018. Ještě během studia jsem 3 roky pracovala v neziskové organizaci Proxima Sociale, kde jsem v terapeutické dvojici lektorovala podpůrné skupiny pro dospívající (12–18 let), kteří měli zkušenost s příbuzenskou pěstounskou péčí anebo s <span className="relative group font-normal">OSPOD<sup className="text-teal-600 font-bold cursor-help text-xs ml-0.5">?</sup><span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max px-2 py-1 bg-gray-700 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">Orgán sociálně-právní ochrany dětí</span></span>.</p>
                    <p>Po ukončení studia jsem 6 let působila jako psycholog v ambulantní části Speciálně pedagogického centra Jedličkova ústavu, kde jsem pracovala s dětmi a dospívajícími s tělesným postižením či jiným dlouhodobým onemocněním. Mojí náplní práce byla tehdy především diagnostika kognitivních funkcí, nastavování podpůrných opatření ve vzdělávání ve spolupráci se školami, a v neposlední řadě také práce s rodinou. Od ledna roku 2024 pracuji jako psycholog ve zdravotnictví na Klinice rehabilitačního lékařství Všeobecné fakultní nemocnice v Praze, kde se věnuji především dospělým lidem se získaným poškozením mozku (CMP, úrazy, pooperační stavy). Kromě neuropsychologické diagnostiky se zde věnuji také nápravě a rehabilitaci kognitivních funkcí, a poskytuji psychologickou podporu jak našim klientům, tak i jejich blízkým.</p>
                    <p>Ve své práci vnímám jako velmi důležitou sféru osobní psychohygieny a sebepéče, velkým tématem je v dnešní době stále častěji umění vyvážení pracovní zátěže a odpočinku, což vnímám jako velmi důležité pilíře pro spokojený život nejen u klientů, kteří jsou v procesu rehabilitace a potýkají se nečekaně s nějakými zdravotními komplikacemi. Až sekundárně se v případě potřeby zabývám konkrétními obtížemi, jako jsou úzkostná nebo depresivní symptomatika, poruchy spánku, poruchy kognitivních funkcí, snížené sebehodnocení, obtíže v mezilidské komunikaci, vztahové či rodinné problémy, syndrom vyhoření a další.</p>
-                   <p>V průběhu roku 2026 nastupuji do akreditovaného psychoterapeutického výcviku v Kognitivně behaviorální terapii.</p>
+                   <p>Od března roku 2024 jsem zařazena v programu specializačního vzdělávání v oboru Klinická psychologie.</p>
+                   <p>V lednu roku 2026 nastupuji do akreditovaného psychoterapeutického výcviku v Kognitivně behaviorální terapii.</p>
                 </div>
               </div>
             </div>
@@ -196,14 +198,20 @@ export default function PsychologistWebsite() {
                   <p>Nabízené služby poskytuji <u>po předchozí domluvě</u> na adrese:<br/>Ostrovského 253/3 (Ženské domovy), 3.patro, dv. č.: 3037<br/>150 00 Praha 5</p>
                 </ContactItem>
                 <ContactItem icon={Phone} title="Telefon">
-                  <a href="sms:+420000000000" className="text-gray-600 hover:text-teal-600 transition-colors duration-300">+420 000 000 000</a>
+                  <a href="sms:+420608935051" className="text-gray-600 hover:text-teal-600 transition-colors duration-300">+420 608 935 051</a>
                 </ContactItem>
                 <ContactItem icon={Mail} title="E-mail">
                   <a href="mailto:psychologiebezecna@gmail.com" className="text-teal-600 hover:underline">psychologiebezecna@gmail.com</a>
                 </ContactItem>
                 <ContactItem icon={Landmark} title="Číslo účtu">
-                  <p>?</p>
-                </ContactItem>
+                  <p onCopy={(event) => {
+                    event.preventDefault();
+                    const unformattedNumber = "3453240019/3030";
+                    event.clipboardData.setData("text/plain", unformattedNumber);
+                    }}
+                  >345 324 0019/3030
+                  </p>
+                </ContactItem>
               </div>
                         <div className="mt-6 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
                           <p className="text-blue-800 text-sm">
