@@ -2,6 +2,7 @@ import React from 'react';
 import { Landmark, Phone, Mail, MapPin, ShieldUser } from 'lucide-react';
 import logo from "./assets/logo.png";
 import heroBackground from "./assets/background.webp";
+import profile from "./assets/andrea.webp"
 import { Transition } from '@headlessui/react';
 
 const SectionTitle = ({ children }) => (
@@ -50,7 +51,7 @@ export default function PsychologistWebsite() {
             <img 
               src={logo} 
               alt="Psychologie Bezecná Logo"
-              className="h-8 w-8 rounded-md" // h-8 roughly matches the height of 2xl text
+              className="h-8 w-8 rounded-md"
             />
             <span>Psychologie Bezecná</span>
           </a>
@@ -132,7 +133,7 @@ export default function PsychologistWebsite() {
             <div className="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-lg flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
               <div className="flex-shrink-0">
                 <img 
-                  src="https://placehold.co/160x160/a0d2db/3c827d?text=Andrea" 
+                  src={profile} 
                   alt="Mgr. Andrea Bezecná"
                   className="rounded-full w-40 h-40 object-cover border-4 border-white shadow-md"
                 />
