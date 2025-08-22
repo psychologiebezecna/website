@@ -217,7 +217,7 @@ export default function PsychologistWebsite() {
 
                         <div className="mt-6 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
                           <p className="text-blue-800 text-sm">
-                            Před navázáním spolupráce se prosím nejdříve ozvěte prostřednictvím SMS anebo e-mailem (popište stručně situaci, se kterou se potýkáte, zanechte mi na sebe kontakt a já se Vám ozvu zpět ohledně termínu).
+                            Před navázáním spolupráce se prosím nejdříve ozvěte prostřednictvím <b>SMS</b> anebo <b>e-mailem</b> (popište stručně situaci, se kterou se potýkáte, zanechte mi na sebe kontakt a já se Vám ozvu zpět ohledně termínu).
                           </p>
                         </div>
                     </div>
