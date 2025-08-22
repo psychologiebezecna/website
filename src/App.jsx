@@ -185,7 +185,7 @@ export default function PsychologistWebsite() {
                                 <MapPin className="text-teal-600 mt-1 flex-shrink-0" size={20}/>
                                 <div>
                                     <h4 className="font-semibold text-gray-700">Adresa</h4>
-                                    <p className="text-gray-600">Nabízené služby poskytuji <u>po předchozí domluvě</u> na adrese:<br/>Ostrovského 253/3 (Ženské domovy), 3.patro, dv. č.: 3037<br/>150 00 Praha 5.</p>
+                                    <p className="text-gray-600">Nabízené služby poskytuji <u>po předchozí domluvě</u> na adrese:<br/>Ostrovského 253/3 (Ženské domovy),<br/>3.patro, dv. č.: 3037<br/>150 00 Praha 5.</p>
                                 </div>
                             </div>
                              <div className="flex items-start gap-4">
