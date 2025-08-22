@@ -132,11 +132,12 @@ export default function PsychologistWebsite() {
             <SectionTitle>O mně</SectionTitle>
             <div className="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-lg flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
               <div className="flex-shrink-0">
-                <img 
-                  src={profile} 
-                  alt="Mgr. Andrea Bezecná"
-                  className="rounded-full w-40 h-40 object-cover border-4 border-white shadow-md"
-                />
+                <div 
+                  style={{ backgroundImage: `url(${profile})` }}
+                  className="rounded-full w-40 h-40 object-cover border-4 border-white shadow-md bg-cover bg-center"
+                  role="img"
+                  aria-label="Mgr. Andrea Bezecná"
+                ></div>
               </div>
               <div className="text-center md:text-left">
                 <h3 className="text-2xl font-bold text-gray-800">Mgr. Andrea Bezecná</h3>
