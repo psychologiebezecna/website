@@ -222,7 +222,7 @@ export default function PsychologistWebsite() {
 
                     {/* Right Column: Map */}
                     <div>
-                        <div className="aspect-w-1 aspect-h-1 md:aspect-h-full md:h-full w-full bg-gray-200 rounded-lg overflow-hidden">
+                        <div className="aspect-square md:aspect-auto md:h-full w-full bg-gray-200 rounded-lg overflow-hidden">
                             <iframe 
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.9491089643243!2d14.40008707682758!3d50.06851471479017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b9457240a2afd%3A0x4f60e664a96d9491!2sOstrovsk%C3%Aho%20253%2F3%2C%2C%20150%2000%20Praha%205-And%C4%9Bl!5e0!3m2!1scs!2scz!4v1755618450355!5m2!1scs!2scz" 
                                 width="100%" 
