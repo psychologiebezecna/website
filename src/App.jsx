@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Sun, Landmark, Phone, Mail, MapPin, ShieldUser, ChevronDown, ChevronUp } from 'lucide-react';
+import { Landmark, Phone, Mail, MapPin, ShieldUser } from 'lucide-react';
 import logo from "./assets/logo.png";
 
 const SectionTitle = ({ children }) => (
@@ -46,8 +46,6 @@ export default function PsychologistWebsite() {
                 {link.label}
               </a>
             ))}
-          </div>
-          <div className="md:hidden">
           </div>
         </nav>
       </header>
