@@ -204,13 +204,7 @@ export default function PsychologistWebsite() {
                   <a href="mailto:psychologiebezecna@gmail.com" className="text-teal-600 hover:underline">psychologiebezecna@gmail.com</a>
                 </ContactItem>
                 <ContactItem icon={Landmark} title="Číslo účtu">
-                  <p onCopy={(event) => {
-                    event.preventDefault();
-                    const unformattedNumber = "3453240019";
-                    event.clipboardData.setData("text/plain", unformattedNumber);
-                    }}
-                  >345 324 0019
-                  </p>/3030
+                  <p>3453240019/3030</p>
                 </ContactItem>
               </div>
                         <div className="mt-6 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
