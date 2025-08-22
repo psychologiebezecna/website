@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Sun, DollarSign, Phone, Mail, MapPin, ShieldUser, ChevronDown, ChevronUp } from 'lucide-react';
+import { User, Sun, Landmark, Phone, Mail, MapPin, ShieldUser, ChevronDown, ChevronUp } from 'lucide-react';
 import logo from "./assets/logo.png";
 
 const SectionTitle = ({ children }) => (
@@ -207,7 +207,7 @@ export default function PsychologistWebsite() {
                                 </div>
                             </div>
                              <div className="flex items-start gap-4">
-                                <DollarSign className="text-teal-600 mt-1 flex-shrink-0" size={20}/>
+                                <Landmark className="text-teal-600 mt-1 flex-shrink-0" size={20}/>
                                 <div>
                                     <h4 className="font-semibold text-gray-700">Číslo účtu</h4>
                                     <p>?</p>
@@ -248,7 +248,7 @@ export default function PsychologistWebsite() {
       <footer className="bg-gray-800 text-gray-400 pt-12 pb-16">
         <div className="container mx-auto px-6 text-center">
             <div className="flex justify-center items-center gap-2 mb-4">
-                <ShieldUser size={16} />
+                <ShieldUser size={24} />
                 <h4 className="font-semibold">Ochrana osobních údajů</h4>
             </div>
             <div className="max-w-3xl mx-auto text-xs space-y-3">
