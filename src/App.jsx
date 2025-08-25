@@ -10,25 +10,16 @@ const SectionTitle = ({ children }) => (
   </h2>
 );
 
-const ServiceCard = ({ title, children }) => (
-  <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 h-full">
-    <h3 className="text-2xl font-semibold text-teal-700 mb-4">{title}</h3>
-    <div className="text-gray-600 space-y-4">
-      {children}
+const ContactItem = ({ icon: Icon, title, children }) => (
+  <div className="flex items-start gap-4">
+    <Icon className="text-teal-600 mt-1 flex-shrink-0" size={20} />
+    <div>
+      <h4 className="font-semibold text-gray-700">{title}</h4>
+      <div className="text-gray-600 space-y-1">
+        {children}
+      </div>
     </div>
   </div>
-);
-
-const ContactItem = ({ icon: Icon, title, children }) => (
-  <div className="flex items-start gap-4">
-    <Icon className="text-teal-600 mt-1 flex-shrink-0" size={20} />
-    <div>
-      <h4 className="font-semibold text-gray-700">{title}</h4>
-      <div className="text-gray-600 space-y-1">
-        {children}
-      </div>
-    </div>
-  </div>
 );
 
 // Main App Component
@@ -86,13 +77,13 @@ export default function PsychologistWebsite() {
         <section id="sluzby" className="py-20 md:py-28 bg-white">
           <div className="container mx-auto px-6">
             <SectionTitle>Služby</SectionTitle>
-            <div className="grid md:grid-cols-2 gap-12">
-              
-              <ServiceCard title="Co nabízím?">
+            <div className="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-md">
+              <h3 className="text-2xl font-semibold text-teal-700 mb-6 text-center">Psychologické poradenství</h3>
+              <div className="space-y-4 text-gray-600">
                 <p className="text-justify">
                   Psychologické poradenství je krátkodobá, odborná podpora, která vám může pomoci lépe zvládat náročné období, ve kterém se cítíte ztracení, vyčerpaní nebo pod tlakem. Ne vždy musí jít o „velký problém“ – často stačí, že se něco v životě zamotá, nevíte, jak dál, nebo potřebujete bezpečný prostor, kde si srovnat myšlenky a emoce.
                 </p>
-                <p>Můžete se na mě obrátit například když:</p>
+                <p className="pt-2">Můžete se na mě obrátit například když:</p>
                 <ul className="list-disc list-inside space-y-2 text-gray-600 pl-4">
                   <li>řešíte vztahové obtíže – partnerské, rodinné nebo pracovní</li>
                   <li>procházíte rozchodem, rozvodem nebo jinou ztrátou</li>
@@ -101,26 +92,10 @@ export default function PsychologistWebsite() {
                   <li>máte potíže s komunikací, sebehodnotou nebo hranicemi</li>
                   <li>potřebujete nadhled, podporu a praktické nástroje, jak se pohnout dál</li>
                 </ul>
-                <p className="text-justify">
-                  Poradenství je zaměřené na přítomnost a blízkou budoučnost – nepracujeme do hloubky s minulostí, ale spíš se soustředíme na to, co teď potřebujete zvládnout, změnit nebo pochopit. Společně se podíváme na to, co právě prožíváte, co vás tíží nebo brzdí. Pomohu vám lépe se v situaci zorientovat, zvládnout související stres, posílit vaši schopnost rozhodovat se, komunikovat nebo najít konkrétní kroky ke změně.
+                <p className="text-justify pt-2">
+                  Poradenství je zaměřené na přítomnost a blízkou budoucnost – nepracujeme do hloubky s minulostí, ale spíš se soustředíme na to, co teď potřebujete zvládnout, změnit nebo pochopit. Společně se podíváme na to, co právě prožíváte, co vás tíží nebo brzdí. Pomohu vám lépe se v situaci zorientovat, zvládnout související stres, posílit vaši schopnost rozhodovat se, komunikovat nebo najít konkrétní kroky ke změně.
                 </p>
-              </ServiceCard>
-
-              <ServiceCard title="Co nenabízím?">
-                <h4 className="font-semibold text-gray-700">Dlouhodobou psychoterapii pro dospělé</h4>
-                <p className="text-justify">
-                  Pokud během společné práce narazíme na nějaká těžší témata či obtíže, jež budou vyžadovat hlubší a déledobější psychoterapeutické vedení, doporučím Vám obrátit se na nějakého kolegu s již absolvovaným psychoterapeutickým výcvikem. Ráda Vám ale v takovém případě pomohu najít někoho pro Vás vhodného.
-                </p>
-                <h4 className="font-semibold text-gray-700 mt-6">Dětskou diagnostiku a psychoterapii</h4>
-                <p className="text-justify">
-                  Protože nemám k dispozici diagnostické nástroje pro děti a dospívající, nenabízím aktuálně v této věkové skupině diagnostiku ani psychoterapii.
-                </p>
-                <div className="mt-4 p-4 bg-amber-50 border-l-4 border-amber-400 rounded-r-lg">
-                  <p className="text-amber-700 text-sm text-justify">
-                    Pokud jste ale jako rodič v situaci, kdy potřebujete poradit ohledně Vašeho dítěte, a nemáte se na koho v blízké době obrátit (např. čekáte delší dobu na vyšetření v nemocnici nebo v psychologické poradně), mohu poskytnout alespoň krátkodobější psychologické podpůrné vedení, případně mohu pomoci s hledáním vhodného odborníka pro Vaše dítě.
-                  </p>
-                </div>
-              </ServiceCard>
+              </div>
             </div>
           </div>
         </section>
@@ -144,7 +119,7 @@ export default function PsychologistWebsite() {
                 <div className="mt-6 text-gray-600 space-y-4 text-justify">
                    <p>Vysokoškolské studium jednooborové psychologie jsem absolvovala na Pedagogické fakultě Univerzity Karlovy v Praze v roce 2018. Ještě během studia jsem 3 roky pracovala v neziskové organizaci Proxima Sociale, kde jsem v terapeutické dvojici lektorovala podpůrné skupiny pro dospívající (12–18 let), kteří měli zkušenost s příbuzenskou pěstounskou péčí anebo s <span className="relative group font-normal">OSPOD<sup className="text-teal-600 font-bold cursor-help text-xs ml-0.5">?</sup><span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max px-2 py-1 bg-gray-700 text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">Orgán sociálně-právní ochrany dětí</span></span>.</p>
                    <p>Po ukončení studia jsem 6 let působila jako psycholog v ambulantní části Speciálně pedagogického centra Jedličkova ústavu, kde jsem pracovala s dětmi a dospívajícími s tělesným postižením či jiným dlouhodobým onemocněním. Mojí náplní práce byla tehdy především diagnostika kognitivních funkcí, nastavování podpůrných opatření ve vzdělávání ve spolupráci se školami, a v neposlední řadě také práce s rodinou. Od ledna roku 2024 pracuji jako psycholog ve zdravotnictví na Klinice rehabilitačního lékařství Všeobecné fakultní nemocnice v Praze, kde se věnuji především dospělým lidem se získaným poškozením mozku (CMP, úrazy, pooperační stavy). Kromě neuropsychologické diagnostiky se zde věnuji také nápravě a rehabilitaci kognitivních funkcí, a poskytuji psychologickou podporu jak našim klientům, tak i jejich blízkým.</p>
-                   <p>Ve své práci vnímám jako velmi důležitou sféru osobní psychohygieny a sebepéče, velkým tématem je v dnešní době stále častěji umění vyvážení pracovní zátěže a odpočinku, což vnímám jako velmi důležité pilíře pro spokojený život nejen u klientů, kteří jsou v procesu rehabilitace a potýkají se nečekaně s nějakými zdravotními komplikacemi. Až sekundárně se v případě potřeby zabývám konkrétními obtížemi, jako jsou úzkostná nebo depresivní symptomatika, poruchy spánku, poruchy kognitivních funkcí, snížené sebehodnocení, obtíže v mezilidské komunikaci, vztahové či rodinné problémy, syndrom vyhoření a další.</p>
+                   <p>Ve své práci vnímám jako velmi důležitou sféru osobní psychohygieny a sebepéče, velkým tématem je v dnešní době stále častěji umění vyvážení pracovní zátěže a odpočinku, což vnímám jako velmi důležité pilíře pro spokojený život nejen u klientů, kteří jsou v procesu rehabilitace a potýkají se nečekaně s nějakými zdravotními komplikacemi. Dále se v případě potřeby zabývám konkrétními obtížemi, jako jsou úzkostná nebo depresivní symptomatika, poruchy spánku, poruchy kognitivních funkcí, snížené sebehodnocení, obtíže v mezilidské komunikaci, vztahové či rodinné problémy, syndrom vyhoření a další.</p>
                    <p>Od března roku 2024 jsem zařazena v programu specializačního vzdělávání v oboru Klinická psychologie.</p>
                    <p>V lednu roku 2026 nastupuji do akreditovaného psychoterapeutického výcviku v Kognitivně behaviorální terapii.</p>
                 </div>
@@ -195,19 +170,19 @@ export default function PsychologistWebsite() {
                         </div>
                         
                         <div className="space-y-4">
-                <ContactItem icon={MapPin} title="Adresa">
-                  <p>Nabízené služby poskytuji <u>po předchozí domluvě</u> na adrese:<br/>Ostrovského 253/3 (Ženské domovy), 3.patro, dv. č.: 3037<br/>150 00 Praha 5</p>
-                </ContactItem>
-                <ContactItem icon={Phone} title="Telefon">
-                  <a href="sms:+420608935051" className="text-gray-600 hover:text-teal-600 transition-colors duration-300">+420 608 935 051</a>
-                </ContactItem>
-                <ContactItem icon={Mail} title="E-mail">
-                  <a href="mailto:psychologiebezecna@gmail.com" className="text-teal-600 hover:underline">psychologiebezecna@gmail.com</a>
-                </ContactItem>
-                <ContactItem icon={Landmark} title="Číslo účtu">
-                  <p>3453240019/3030</p>
-                </ContactItem>
-              </div>
+                          <ContactItem icon={MapPin} title="Adresa">
+                            <p>Nabízené služby poskytuji <u>po předchozí domluvě</u> na adrese:<br/>Ostrovského 253/3 (Ženské domovy), 3.patro, dv. č.: 3037<br/>150 00 Praha 5</p>
+                          </ContactItem>
+                          <ContactItem icon={Phone} title="Telefon">
+                            <a href="sms:+420608935051" className="text-gray-600 hover:text-teal-600 transition-colors duration-300">+420 608 935 051</a>
+                          </ContactItem>
+                          <ContactItem icon={Mail} title="E-mail">
+                            <a href="mailto:psychologiebezecna@gmail.com" className="text-teal-600 hover:underline">psychologiebezecna@gmail.com</a>
+                          </ContactItem>
+                          <ContactItem icon={Landmark} title="Číslo účtu">
+                            <p>3453240019/3030</p>
+                          </ContactItem>
+                        </div>
                         <div className="mt-6 p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
                           <p className="text-blue-800 text-sm">
                             Před navázáním spolupráce se prosím nejdříve ozvěte prostřednictvím <b>SMS</b> anebo <b>e-mailem</b> (popište stručně situaci, se kterou se potýkáte, zanechte mi na sebe kontakt a já se Vám ozvu zpět ohledně termínu).
