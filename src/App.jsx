@@ -137,7 +137,7 @@ export default function PsychologistWebsite() {
             <div className="max-w-3xl mx-auto space-y-8">
               <div className="grid sm:grid-cols-2 gap-8 text-center">
                 <div className="bg-gray-50 p-8 rounded-xl border border-gray-200">
-                  <h3 className="text-xl font-semibold text-gray-800">První / jednorázová konzultace</h3>
+                  <h3 className="text-xl font-semibold text-gray-800 whitespace-nowrap">První / jednorázová konzultace</h3>
                   <p className="text-4xl font-bold text-teal-600 mt-4">800,- Kč</p>
                   <p className="text-gray-500 mt-2">/ 60 minut</p>
                 </div>
