@@ -87,6 +87,7 @@ export default function PsychologistWebsite() {
                 <ul className="list-disc list-inside space-y-2 text-gray-600 pl-4">
                   <li>řešíte vztahové obtíže – partnerské, rodinné nebo pracovní</li>
                   <li>procházíte rozchodem, rozvodem nebo jinou ztrátou</li>
+                  <li>čelíte důsledkům závažného onemocnění či změny zdravotního stavu - vlastního nebo v rodině</li>
                   <li>jste dlouhodobě pod tlakem, ve stresu nebo na pokraji vyhoření</li>
                   <li>čelíte náročným rozhodnutím nebo životním změnám</li>
                   <li>máte potíže s komunikací, sebehodnotou nebo hranicemi</li>
