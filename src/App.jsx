@@ -87,12 +87,12 @@ export default function PsychologistWebsite() {
                 <ul className="list-disc list-inside space-y-2 text-gray-600 pl-4">
                   <li>řešíte vztahové obtíže – partnerské, rodinné nebo pracovní</li>
                   <li>procházíte rozchodem, rozvodem nebo jinou ztrátou</li>
+                  <li>jste rodič a hledáte podporu při řešení potíží svého dítěte (např. emoce, chování, škola, vrstevnické vztahy)</li>
                   <li>čelíte důsledkům závažného onemocnění či změny zdravotního stavu - vlastního nebo v rodině</li>
                   <li>jste dlouhodobě pod tlakem, ve stresu nebo na pokraji vyhoření</li>
                   <li>čelíte náročným rozhodnutím nebo životním změnám</li>
                   <li>máte potíže s komunikací, sebehodnotou nebo hranicemi</li>
                   <li>potřebujete nadhled, podporu a praktické nástroje, jak se pohnout dál</li>
-                  <li>jste rodič a hledáte podporu při řešení potíží svého dítěte (např. emoce, chování, škola, vrstevnické vztahy)</li>
                 </ul>
                 <p className="text-justify pt-2">
                   Poradenství je zaměřené na přítomnost a blízkou budoucnost – nepracujeme do hloubky s minulostí, ale spíš se soustředíme na to, co teď potřebujete zvládnout, změnit nebo pochopit. Společně se podíváme na to, co právě prožíváte, co vás tíží nebo brzdí. Pomohu vám lépe se v situaci zorientovat, zvládnout související stres, posílit vaši schopnost rozhodovat se, komunikovat nebo najít konkrétní kroky ke změně.
