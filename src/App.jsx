@@ -81,14 +81,14 @@ export default function PsychologistWebsite() {
               <h3 className="text-2xl font-semibold text-teal-700 mb-6 text-center">Psychologické poradenství</h3>
               <div className="space-y-4 text-gray-600">
                 <p className="text-justify">
-                  Psychologické poradenství je krátkodobá, odborná podpora, která vám může pomoci lépe zvládat náročné období, ve kterém se cítíte ztracení, vyčerpaní nebo pod tlakem. Ne vždy musí jít o „velký problém“ – často stačí, že se něco v životě zamotá, nevíte, jak dál, nebo potřebujete bezpečný prostor, kde si srovnat myšlenky a emoce.
+                  Psychologické poradenství je odborná podpora, která vám může pomoci lépe zvládat náročné období, ve kterém se cítíte ztracení, vyčerpaní nebo pod tlakem. Ne vždy musí jít o „velký problém“ – často stačí, že se něco v životě zamotá, nevíte, jak dál, nebo potřebujete bezpečný prostor, kde si srovnat myšlenky a emoce.
                 </p>
                 <p className="pt-2">Můžete se na mě obrátit například když:</p>
                 <ul className="list-disc list-inside space-y-2 text-gray-600 pl-4">
                   <li>řešíte vztahové obtíže – partnerské, rodinné nebo pracovní</li>
                   <li>procházíte rozchodem, rozvodem nebo jinou ztrátou</li>
-                  <li>jste rodič a hledáte podporu při řešení potíží svého dítěte (např. emoce, chování, škola, vrstevnické vztahy)</li>
                   <li>čelíte důsledkům závažného onemocnění či změny zdravotního stavu - vlastního nebo v rodině</li>
+                  <li>jste rodič a hledáte podporu při řešení potíží svého dítěte (např. emoce, chování, škola, vrstevnické vztahy)</li>
                   <li>jste dlouhodobě pod tlakem, ve stresu nebo na pokraji vyhoření</li>
                   <li>čelíte náročným rozhodnutím nebo životním změnám</li>
                   <li>máte potíže s komunikací, sebehodnotou nebo hranicemi</li>
