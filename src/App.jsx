@@ -174,7 +174,7 @@ export default function PsychologistWebsite() {
                         
                         <div className="space-y-4">
                           <ContactItem icon={MapPin} title="Adresa">
-                            <p>Nabízené služby poskytuji <u>po předchozí domluvě</u> na adrese:<br/>Ostrovského 253/3 (Ženské domovy), 3.patro, dv. č.: 3037<br/>150 00 Praha 5, anebo online </p>
+                            <p>Nabízené služby poskytuji <u>po předchozí domluvě</u> na adrese:<br/>Ostrovského 253/3 (Ženské domovy), 3.patro, dv. č.: 3037<br/>150 00 Praha 5</p>
                           </ContactItem>
                           <ContactItem icon={Phone} title="Telefon">
                             <a href="sms:+420608935051" className="text-gray-600 hover:text-teal-600 transition-colors duration-300">+420 608 935 051</a>
